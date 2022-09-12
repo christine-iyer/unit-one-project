@@ -111,5 +111,6 @@ function load()
 	shuffle();
 	renderDeck();
 }
-
-window.onload = load;
+shuffleBtn = document.getElementById('btn');
+shuffleBtn.addEventListener('click', load)
+// window.onload = load();
