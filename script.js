@@ -98,12 +98,14 @@ renderDeck: function renderDeck() {
 	}
 },
 
+
 load: function load(){
-	deck = getDeck();
+    let shuffleBtn = document.querySelector('#btn');
+    shuffleBtn.addEventListener('click', load);
+    deck = getDeck();
 	shuffle();
 	renderDeck();
-    shuffleBtn = document.querySelector('#btn');
-    shuffleBtn.addEventListener('click', load);
+    
 }
 };
 
