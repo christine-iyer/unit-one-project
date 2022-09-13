@@ -48,45 +48,41 @@ const cardsArray = [
      new Card("ER",2,7)
 ]
 
-const getDeck =()=> {
-    let deck = [];
-    for (let i = 0; i<cardsArray.length; i++){
-        for (let j = 0; j<cardsArray[i].count; j++){
-            let card = new Card(cardsArray[i].suit, 1, cardsArray[i].value)
-            deck.push(card)
-    }
-    } return deck
-}
-// getDeck()
-function shuffle()
-{
+// Create game object
+const game = {
+    round: this.round,
+    getDeck: getDeck =()=> {
+        let deck = [];
+        for (let i = 0; i<cardsArray.length; i++){
+            for (let j = 0; j<cardsArray[i].count; j++){
+                let card = new Card(cardsArray[i].suit, 1, cardsArray[i].value)
+                deck.push(card)
+            }
+        } 
+        return deck
+    },
+    shuffle: function shuffle() {
 	// for 1000 turns
 	// switch the values of two random cards
-	for (var i = 0; i < 1000; i++)
-	{
+	for (var i = 0; i < 1000; i++) {
 		var location1 = Math.floor((Math.random() * deck.length));
 		var location2 = Math.floor((Math.random() * deck.length));
 		var tmp = deck[location1];
-
-		deck[location1] = deck[location2];
+        deck[location1] = deck[location2];
 		deck[location2] = tmp;
 	}
+getDeck();
+},
 
-	getDeck();
-}
-
-function renderDeck()
-{
+renderDeck: function renderDeck() {
 	document.getElementById('deck').innerHTML = '';
-	for(var i = 0; i < deck.length; i++)
-	{
+	for(var i = 0; i < deck.length; i++) {
 		var card = document.createElement("div");
 		var suit = document.createElement("h1");
 		var value = document.createElement("div");
 		card.className = "card";
-        card.style.color = 'white';
-
-		value.className = "value";
+        card.style.color = 'white'
+        value.className = "value";
         value.style.color = "grey";
         value.style.textAlign = 'left';
         suit.className = "suit";
@@ -98,19 +94,21 @@ function renderDeck()
         suit.innerHTML = deck[i].suit;
         card.appendChild(suit);
 		card.appendChild(value);
-        
-
-
-		document.getElementById("deck").appendChild(card);
+        document.getElementById("deck").appendChild(card);
 	}
-}
+},
 
-function load()
-{
+load: function load(){
 	deck = getDeck();
 	shuffle();
 	renderDeck();
+    shuffleBtn = document.querySelector('#btn');
+    shuffleBtn.addEventListener('click', load);
 }
-shuffleBtn = document.getElementById('btn');
-shuffleBtn.addEventListener('click', load)
-// window.onload = load();
+};
+
+   
+
+
+
+
