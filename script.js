@@ -3,7 +3,27 @@ const wordsArray = ["Abuse", "Adult", "Agent", "Anger", "Apple", "Award", "Basis
 /////////////////
 
 
+
 let cardDeckArray = [];
+
+class Player {
+    constructor(name,cards){
+        this.name = name,
+        this.cards = [];
+    }
+    pickup(pickUpPile){
+
+    }
+    discard (discardPile){
+
+    }
+}
+const players = [
+    new Player("A"),
+    new Player("B")
+]
+
+
 class Card {
      constructor (suit, count, value) {
        this.suit = suit;
@@ -50,13 +70,32 @@ const cardsArray = [
 
 // Create game object
 const game = {
-    round: this.round,
+    newRound: newRound = ()=> {
+        let roundNumber = 1;
+        for (let i = 1; i<cardsArray.length; i++){
+            while (roundNumber <=8){
+                playerHandLength = i+2
+            }
+        }
+
+
+
+
+    }
+
+
+}
+
+// Create deckObject object
+const deckObject = {
+
     getDeck: getDeck =()=> {
         let deck = [];
         for (let i = 0; i<cardsArray.length; i++){
             for (let j = 0; j<cardsArray[i].count; j++){
                 let card = new Card(cardsArray[i].suit, 1, cardsArray[i].value)
                 deck.push(card)
+                // deck = deck.slice(0,6)
             }
         } 
         return deck
@@ -96,19 +135,64 @@ renderDeck: function renderDeck() {
         document.getElementById("deck").appendChild(card);
 	}
 },
+deal: function deal (playerOne,PlayerTwo){
+    this.playerOne = playerOne,
+    this.PlayerTwo = PlayerTwo
+
+
+},
 load: function load(){
-    deck = game.getDeck();
-    game.shuffle();
-	game.renderDeck();
-   
+    deck = deckObject.getDeck();
+    deckObject.shuffle();
+	deckObject.renderDeck();
+    let deckArray = Array.from(deckObject);
+    console.log(deckArray.slice(0,6));
+    
 
+    
 }
-
-
 };
-let shuffleBtn = document.querySelector('#btn');
 
-shuffleBtn.addEventListener('click', game.load);
+let round = document.querySelector('#round');
+round.innerHTML = round.playerHandLength;
+let shuffleBtn = document.querySelector('#btn');
+shuffleBtn.addEventListener('click', deckObject.load);
+
+class Temperature {
+    constructor(celsius) {
+      this.celsius = celsius;
+    }
+    get fahrenheit() {
+      return this.celsius * 1.8 + 32;
+    }
+    set fahrenheit(value) {
+      this.celsius = (value - 32) / 1.8;
+    }
+    static fromFahrenheit(value) {
+      return new Temperature((value - 32) / 1.8);
+    }
+  }
+  const submitBtn = document.querySelector('#btn');
+  submitBtn.style.color = "red";
+  submitBtn.style.borderRadius = "11px"
+  const resultDiv = document.getElementById('converted')
+  submitBtn.addEventListener('click',() => {
+    let num = document.getElementById('#num');
+    let temp = new Temperature(num);
+    resultDiv.style.color = "pink";
+    resultDiv.style.outline = "thick solid #0000FF";
+
+    resultDiv.innerText= temp.fahrenheit;
+    
+
+
+    // temp = new Temperature(temp);
+    // temp.innerHTML = `${temp.fahrenheit}`;
+    // console.log(temp);
+    alert("hello world");
+}
+  )
+
 
    
 
