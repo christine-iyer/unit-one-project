@@ -77,13 +77,7 @@ const game = {
                 playerHandLength = i+2
             }
         }
-
-
-
-
     }
-
-
 }
 
 // Create deckObject object
@@ -132,6 +126,7 @@ renderDeck: function renderDeck() {
         suit.innerHTML = deck[i].suit;
         card.appendChild(suit);
 		card.appendChild(value);
+        //
         document.getElementById("deck").appendChild(card);
 	}
 },
@@ -146,11 +141,7 @@ load: function load(){
     deckObject.shuffle();
 	deckObject.renderDeck();
     let deckArray = Array.from(deckObject);
-    console.log(deckArray.slice(0,6));
-    
-
-    
-}
+ }
 };
 
 let round = document.querySelector('#round');
@@ -158,44 +149,15 @@ round.innerHTML = round.playerHandLength;
 let shuffleBtn = document.querySelector('#btn');
 shuffleBtn.addEventListener('click', deckObject.load);
 
-class Temperature {
-    constructor(celsius) {
-      this.celsius = celsius;
-    }
-    get fahrenheit() {
-      return this.celsius * 1.8 + 32;
-    }
-    set fahrenheit(value) {
-      this.celsius = (value - 32) / 1.8;
-    }
-    static fromFahrenheit(value) {
-      return new Temperature((value - 32) / 1.8);
-    }
-  }
-  const submitBtn = document.querySelector('#btn');
-  submitBtn.style.color = "red";
-  submitBtn.style.borderRadius = "11px"
-  const resultDiv = document.getElementById('converted')
-  submitBtn.addEventListener('click',() => {
-    let num = document.getElementById('#num');
-    let temp = new Temperature(num);
-    resultDiv.style.color = "pink";
-    resultDiv.style.outline = "thick solid #0000FF";
 
-    resultDiv.innerText= temp.fahrenheit;
+// This piece is for the event listener that gets the string/s sorts and determines if they;'re legit
+const getGiveData = () => {
+    let textFieldData = document.querySelector('string');
+
+    let btnTxt = document.querySelector('#btnText');
     
+document.querySelector('#text-area_1').innerText = textFieldData 
 
-
-    // temp = new Temperature(temp);
-    // temp.innerHTML = `${temp.fahrenheit}`;
-    // console.log(temp);
-    alert("hello world");
 }
-  )
-
-
-   
-
-
-
+btnTxt.addEventListener('click', getGiveData);
 
