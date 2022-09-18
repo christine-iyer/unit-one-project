@@ -97,22 +97,22 @@ const game = {
 // Create deckObject object
 const deckObject = {
     getDeck: getDeck =()=> {
-        let deck = [];
+        window.deck = [];
         for (let i = 0; i<cardsArray.length; i++){
             for (let j = 0; j<cardsArray[i].count; j++){
                 let card = new Card(cardsArray[i].suit, 1, cardsArray[i].value)
-                deck.push(card)
+                window.deck.push(card)
             }
         } 
-        return deck
+        return window.deck
     },
     shuffle: function shuffle() {
 	for (var i = 0; i < 1000; i++) {
-		var location1 = Math.floor((Math.random() * deck.length));
-		var location2 = Math.floor((Math.random() * deck.length));
-		var tmp = deck[location1];
-        deck[location1] = deck[location2];
-		deck[location2] = tmp;
+		var location1 = Math.floor((Math.random() * window.deck.length));
+		var location2 = Math.floor((Math.random() * window.deck.length));
+		var tmp = window.deck[location1];
+        window.deck[location1] = window.deck[location2];
+		window.deck[location2] = tmp;
 	}
     getDeck();
     addingListeners();
@@ -175,11 +175,11 @@ console.log(typeof(deck1))
 const deckArrayTest = Object.entries(deck1);
 console.log(deck1);
 console.log(typeof(deck1))
+console.log(window.deck);
 
 
 
 
-
-
+console.log(window.deck[3].suit);
 
 
