@@ -7,3 +7,7 @@ This version will be a single player competing against the computer. Like many c
 To keep this version simple, yet scaleable, 
 ....                                                     
 in another object property. Once someone checks out, the other player is offered a final opportunity to pick up, use their letters in words, and discard. Their correct word will be tallied for points and unused letters will be deducted. Finally, any time someone uses all of their letters in a single word, a bonus 5 points will e added to their score. The venter of the screen will have the pickup and discard piles, tthe players hand will be bottom center, the computers hidden hand will be illustrated by a pile of plain card. A scoreboard for each player will be updated in real time in a location TBA. I like the candy crush layout with drag and drop capabilities, but I don't know how to handle the incrementally increasing hand lengths by round."
+
+### Resources
+[W3]("https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_draganddrop2") 
+[Medium]("https://medium.com/@blakeeh723/how-to-build-a-card-game-with-object-oriented-programming-c43cd2cadb3a")

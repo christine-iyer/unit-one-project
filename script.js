@@ -170,8 +170,13 @@ btnTxt.addEventListener('click', getGiveData);
 // btnTxt.addEventListener('click', verifyData)
 
 var deck1 = getDeck();
-console.log(deck1.suit);
+
 console.log(typeof(deck1))
+const deckArrayTest = Object.entries(deck1);
+console.log(deck1);
+console.log(typeof(deck1))
+
+
 
 
 
