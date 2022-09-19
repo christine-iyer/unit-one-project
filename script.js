@@ -17,13 +17,6 @@ function addingListeners(){
         })
     })
 }
-
-
-
-
-
-
-
 class Player {
     constructor(name,cards){
         this.name = name,
@@ -133,19 +126,15 @@ renderDeck: function renderDeck() {
         suit.style.accentColor = "pink";
         suit.style.color = "black";
         suit.style.fontFamily = "Beautiful-Norway", "sans-serif";
-		value.innerText = deck[i].value;
-        suit.innerHTML = deck[i].suit;
+		value.innerText = window.deck[i].value;
+        suit.innerHTML = window.deck[i].suit;
         card.appendChild(suit);
 		card.appendChild(value);
         document.getElementById("deck").appendChild(card);
     }
 },
-// deal: function deal (playerOne,PlayerTwo){
-//     this.playerOne = playerOne,
-//     this.PlayerTwo = PlayerTwo
-// },
 load: function load(){
-    deck = deckObject.getDeck();
+    deckObject.getDeck();
     deckObject.shuffle();
 	deckObject.renderDeck();
 }
@@ -153,7 +142,7 @@ load: function load(){
 let round = document.querySelector('#round');
 round.innerHTML = round.playerHandLength;
 let shuffleBtn = document.querySelector('#btn');
-shuffleBtn.addEventListener('click', deckObject.load);
+// shuffleBtn.addEventListener('click', deckObject.load);
 // This piece is for the event listener that gets the string/s sorts and determines if they;'re legit
 const getGiveData = () => {
     let textFieldData = document.getElementById('textField').value;
@@ -166,20 +155,61 @@ const getGiveData = () => {
 //     document.getElementById('converted').textContent = x 
 //     console.log("you  wrote" + x);
 // }
-btnTxt.addEventListener('click', getGiveData);
+// btnTxt.addEventListener('click', getGiveData);
 // btnTxt.addEventListener('click', verifyData)
 
 var deck1 = getDeck();
 
-console.log(typeof(deck1))
-const deckArrayTest = Object.entries(deck1);
+function shuffleArray(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+
+  let shuffledArray = shuffleArray(deck1)
+
+
+
+console.log(deck1.length)
+
+// console.log(typeof(deck1))
+// deck1 = Object.entries(deck1);
 console.log(deck1);
 console.log(typeof(deck1))
-console.log(window.deck);
 
 
 
 
-console.log(window.deck[3].suit);
+
+
+console.log(deck1[2])
+
+
+
+let p1A = []
+p1A = console.log(deck1.slice(0,5));
+
+// btnTxt.addEventListener('click', function(evt) {
+//     console.log(evt)
+// });
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', function(evt) {
+  // testing!
+  console.log(evt);  
+});
+
 
 
