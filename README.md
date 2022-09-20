@@ -14,7 +14,28 @@ Building this game has been absolutely overwhelming and I have yet to succeed.
 
 My first couple of days were spent reformatting the card data...I had created a card class and then made the individual cards with a letter and its assigned point value. There are varying quantities of each letter. 
 
-Once I built the deck, I needed to learn how to shuffle and deal. Using online resources and video tutorials, I patchworked some code together that rendered a ready to use deck. Unfortunately I couldn't access it as it was deeply nested, until Arthur introduced me to the window property...with Josh's help it worked. 
+| Letter      | Points | Count in Deck     |
+| :---        |    :----:   |          ---: |
+| A      | 2       | 8   |
+| B   | 6        | 3     |
+
+
+
+| Letter      |  Test Text     |
+| :---          |          ---: |
+| A      | 2        |
+| A   | 2            |
+| A      | 2        |
+| A   | 2            |
+| A      | 2        |
+| A   | 2            |
+| A      | 2        |
+| A   | 2            |
+| B   | 6            |
+| B      | 6        |
+| B   | 6            |
+
+Once I built the deck, I needed to learn how to randomize, i.e., shuffle, and deal. Using online resources and video tutorials, I patchworked some code together that rendered a ready to use deck. Unfortunately I couldn't access it as it was deeply nested, until Arthur introduced me to the window property...with Josh's help it worked. 
 
 Meanwhile, I built some letter tiles which are a hybrid of the quiddler cards and scrabble tiles, but as they were styled in js, they were deeply nested. I was afraid of a reprise, so I hand coded a deck and started again. 
 
