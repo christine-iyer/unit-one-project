@@ -21,7 +21,7 @@ My first couple of days were spent reformatting the card data...I had created a 
 
 
 
-| Letter      |  Test Text     |
+| Letter      |  Points     |
 | :---          |          ---: |
 | A      | 2        |
 | A   | 2            |
