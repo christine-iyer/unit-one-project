@@ -1,38 +1,38 @@
 // const wordsArray = ["Abuse", "Adult", "Agent", "Anger", "Apple", "Award", "Basis", "Beach", "Birth", "Block", "Blood", "Board", "Brain", "Bread", "Break", "Brown", "Buyer", "Cause", "Chain", "Chair", "Chest", "Chief", "Child", "China", "Claim", "Class", "Clock", "Coach", "Coast", "Court", "Cover", "Cream", "Crime", "Cross", "Crowd", "Crown", "Cycle", "Dance", "Death", "Depth", "Doubt", "Draft", "Drama", "Dream", "Dress", "Drink", "Drive", "Earth", "Enemy", "Entry", "Error", "Event", "Faith", "Fault", "Field", "Fight", "Final", "Floor", "Focus", "Force", "Frame", "Frank", "Front", "Fruit", "Glass", "Grant", "Grass", "Green", "Group", "Guide", "Heart", "Henry", "Horse", "Hotel", "House", "Image", "Index", "Input", "Issue", "Japan", "Jones", "Judge", "Knife", "Laura", "Layer", "Level", "Lewis", "Light", "Limit", "Lunch", "Major", "March", "Match", "Metal", "Model", "Money", "Month", "Motor", "Mouth", "Music", "Night", "Noise", "North", "Novel", "Nurse", "Offer", "Order", "Other", "Owner", "Panel", "Paper", "Party", "Peace", "Peter", "Phase", "Phone", "Piece", "Pilot", "Pitch", "Place", "Plane", "Plant", "Plate", "Point", "Pound", "Power", "Press", "Price", "Pride", "Prize", "Proof", "Queen", "Radio", "Range", "Ratio", "Reply", "Right", "River", "Round", "Route", "Rugby", "Scale", "Scene", "Scope", "Score", "Sense", "Shape", "Share", "Sheep", "Sheet", "Shift", "Shirt", "Shock", "Sight", "Simon", "Skill", "Sleep", "Smile", "Smith", "Smoke", "Sound", "South", "Space", "Speed", "Spite", "Sport", "Squad", "Staff", "Stage", "Start", "State", "Steam", "Steel", "Stock", "Stone", "Store", "Study", "Stuff", "Style", "Sugar", "Table", "Taste", "Terry", "Theme", "Thing", "Title", "Total", "Touch", "Tower", "Track", "Trade", "Train", "Trend", "Trial", "Trust", "Truth", "Uncle", "Union", "Unity", "Value", "Video", "Visit", "Voice", "Waste", "Watch", "Water", "While", "White", "Whole", "Woman", "World", "Youth", "One’s", "There", "Where", "Which", "Whose", "Whoso", "Yours", "Yours",  "Admit", "Adopt", "Agree", "Allow", "Alter", "Apply", "Argue", "Arise", "Avoid", "Begin", "Blame", "Break", "Bring", "Build", "Burst", "Carry", "Catch", "Cause", "Check", "Claim", "Clean", "Clear", "Climb", "Close", "Count", "Cover", "Cross", "Dance", "Doubt", "Drink", "Drive", "Enjoy", "Enter", "Exist", "Fight", "Focus", "Force", "Guess", "Imply", "Issue", "Judge", "Laugh", "Learn", "Leave", "Let’s", "Limit", "Marry", "Match", "Occur", "Offer", "Order", "Phone", "Place", "Point", "Press", "Prove", "Raise", "Reach", "Refer", "Relax", "Serve", "Shall", "Share", "Shift", "Shoot", "Sleep", "Solve", "Sound", "Speak", "Spend", "Split", "Stand", "Start", "State", "Stick", "Study", "Teach", "Thank", "Think", "Throw", "Touch", "Train", "Treat", "Trust", "Visit", "Voice", "Waste", "Watch", "Worry", "Would", "Write",  "Above", "Acute", "Alive", "Alone", "Angry", "Aware", "Awful", "Basic", "Black", "Blind", "Brave", "Brief", "Broad", "Brown", "Cheap", "Chief", "Civil", "Clean", "Clear", "Close", "Crazy", "Daily", "Dirty", "Early", "Empty", "Equal", "Exact", "Extra", "Faint", "False", "Fifth", "Final", "First", "Fresh", "Front", "Funny", "Giant", "Grand", "Great", "Green", "Gross", "Happy", "Harsh", "Heavy", "Human", "Ideal", "Inner", "Joint", "Large", "Legal", "Level", "Light", "Local", "Loose", "Lucky", "Magic", "Major", "Minor", "Moral", "Naked", "Nasty", "Naval", "Other", "Outer", "Plain", "Prime", "Prior", "Proud", "Quick", "Quiet", "Rapid", "Ready", "Right", "Roman", "Rough", "Round", "Royal", "Rural", "Sharp", "Sheer", "Short", "Silly", "Sixth", "Small", "Smart", "Solid", "Sorry", "Spare", "Steep", "Still", "Super", "Sweet", "Thick", "Third", "Tight", "Total", "Tough", "Upper", "Upset", "Urban", "Usual", "Vague", "Valid", "Vital", "White", "Whole", "Wrong", "Young", "Afore", "After", "Bothe", "Other", "Since", "Slash", "Until", "Where", "While",  "Aback", "Abaft", "Aboon", "About", "Above", "Accel", "Adown", "Afoot", "Afore", "Afoul", "After", "Again", "Agape", "Agogo", "Agone", "Ahead", "Ahull", "Alife", "Alike", "Aline", "Aloft", "Alone", "Along", "Aloof", "Aloud", "Amiss", "Amply", "Amuck", "Apace", "Apart", "Aptly", "Arear", "Aside", "Askew", "Awful", "Badly", "Bally", "Below", "Canny", "Cheap", "Clean", "Clear", "Coyly", "Daily", "Dimly", "Dirty", "Ditto", "Drily", "Dryly", "Dully", "Early", "Extra", "False", "Fatly", "Feyly", "First", "Fitly", "Forte", "Forth", "Fresh", "Fully", "Funny", "Gaily", "Gayly", "Godly", "Great", "Haply", "Heavy", "Hella", "Hence", "Hotly", "Icily", "Infra", "Intl.", "Jildi", "Jolly", "Laxly", "Lento", "Light", "Lowly", "Madly", "Maybe", "Never", "Newly", "Nobly", "Oddly", "Often", "Other", "Ought", "Party", "Piano", "Plain", "Plonk", "Plumb", "Prior", "Queer", "Quick", "Quite", "Ramen", "Rapid", "Redly", "Right", "Rough", "Round", "Sadly", "Secus", "Selly", "Sharp", "Sheer", "Shily", "Short", "Shyly", "Silly", "Since", "Sleek", "Slyly", "Small", "So-So", "Sound", "Spang", "Srsly", "Stark", "Still", "Stone", "Stour", "Super", "Tally", "Tanto", "There", "Thick", "Tight", "Today", "Tomoz", "Truly", "Twice", "Under", "Utter", "Verry", "Wanly", "Wetly", "Where", "Wrong", "Wryly",  "Abaft", "Aboon", "About", "Above", "Adown", "Afore", "After", "Along", "Aloof", "Among", "Below", "Circa", "Cross", "Furth", "Minus", "Neath", "Round", "Since", "Spite", "Under", "Until", "5 Letter Interjections", "Aargh", "Adieu", "Adios", "Alack", "Aloha", "Avast", "Bakaw", "Basta", "Begad", "Bless", "Blige", "Brava", "Bravo", "Bring", "Chook", "Damme", "Dildo", "Ditto", "Frick", "Fudge", "Golly", "Gratz", "Hallo", "Hasta", "Havoc", "Hella", "Hello", "Howay", "Howdy", "Hullo", "Huzza", "Jesus", "Kapow", "Loose", "Lordy", "Marry", "Mercy", "Night", "Plonk", "Psych", "Quite", "Salve", "Skoal", "Sniff", "Sooey", "There", "Thiam", "Thwap", "Tough", "Twirp", "Viola", "Vivat", "Wacko", "Wahey", "Whist", "Wilma", "Wirra", "Woops", "Wowie", "Yecch", "Yeeha", "Yeesh", "Yowch", "Zowie","Area", "Army", "Baby", "Back", "Ball", "Band", "Bank", "Base", "Bill", "Body", "Book", "Call", "Card", "Care", "Case", "Cash", "City", "Club", "Cost", "Date", "Deal", "Door", "Duty", "East", "Edge", "Face", "Fact", "Farm", "Fear", "Fig", "File", "Film", "Fire", "Firm", "Fish", "Food", "Foot", "Form", "Fund", "Game", "Girl", "Goal", "Gold", "Hair", "Half", "Hall", "Hand", "Head", "Help", "Hill", "Home", "Hope", "Hour", "Idea", "Jack", "John", "Kind", "King", "Lack", "Lady", "Land", "Life", "Line", "List", "Look", "Lord", "Loss", "Love", "Mark", "Mary", "Mind", "Miss", "Move", "Name", "Need", "News", "Note", "Page", "Pain", "Pair", "Park", "Part", "Past", "Path", "Paul", "Plan", "Play", "Post", "Race", "Rain", "Rate", "Rest", "Rise", "Risk", "Road", "Rock", "Role", "Room", "Rule", "Sale", "Seat", "Shop", "Show", "Side", "Sign", "Site", "Size", "Skin", "Sort", "Star", "Step", "Task", "Team", "Term", "Test", "Text", "Time", "Tour", "Town", "Tree", "Turn", "Type", "Unit", "User", "View", "Wall", "Week", "West", "Wife", "Will", "Wind", "Wine", "Wood", "Word", "Work", "Year", "Four Letter Pronouns", "Dese", "Enuf", "Feel", "Hern", "Hers", "Many", "Mine", "Mine", "Much", "Nada", "Nish", "None", "Nowt", "Ours", "Same", "Self", "Some", "Such", "That", "Thee", "Them", "They", "This", "Thon", "Thor", "Thou", "Thou", "Tone", "What", "When", "Whom", "Yere", "Your", "Four Letter Verbs", "Bear", "Beat", "Blow", "Burn", "Call", "Care", "Cast", "Come", "Cook", "Cope", "Cost", "Dare", "Deal", "Deny", "Draw", "Drop", "Earn", "Face", "Fail", "Fall", "Fear", "Feel", "Fill", "Find", "Form", "Gain", "Give", "Grow", "Hang", "Hate", "Have", "Head", "Hear", "Help", "Hide", "Hold", "Hope", "Hurt", "Join", "Jump", "Keep", "Kill", "Know", "Land", "Last", "Lead", "Lend", "Lift", "Like", "Link", "Live", "Look", "Lose", "Love", "Make", "Mark", "Meet", "Mind", "Miss", "Move", "Must", "Name", "Need", "Note", "Open", "Pass", "Pick", "Plan", "Play", "Pray", "Pull", "Push", "Read", "Rely", "Rest", "Ride", "Ring", "Rise", "Risk", "Roll", "Rule", "Save", "Seek", "Seem", "Sell", "Send", "Shed", "Show", "Shut", "Sign", "Sing", "Slip", "Sort", "Stay", "Step", "Stop", "Suit", "Take", "Talk", "Tell", "Tend", "Test", "Turn", "Vary", "View", "Vote", "Wait", "Wake", "Walk", "Want", "Warn", "Wash", "Wear", "Will", "Wish", "Work", "Four Letter Adjectives", "Able", "Back", "Bare", "Bass", "Blue", "Bold", "Busy", "Calm", "Cold", "Cool", "Damp", "Dark", "Dead", "Deaf", "Dear", "Deep", "Dual", "Dull", "Dumb", "Easy", "Evil", "Fair", "Fast", "Fine", "Firm", "Flat", "Fond", "Foul", "Free", "Full", "Glad", "Good", "Grey", "Grim", "Half", "Hard", "Head", "High", "Holy", "Huge", "Just", "Keen", "Kind", "Last", "Late", "Lazy", "Like", "Live", "Lone", "Long", "Loud", "Main", "Male", "Mass", "Mean", "Mere", "Mild", "Nazi", "Near", "Neat", "Next", "Nice", "Okay", "Only", "Open", "Oral", "Pale", "Past", "Pink", "Poor", "Pure", "Rare", "Real", "Rear", "Rich", "Rude", "Safe", "Same", "Sick", "Slim", "Slow", "Soft", "Sole", "Sore", "Sure", "Tall", "Then", "Thin", "Tidy", "Tiny", "Tory", "True", "Ugly", "Vain", "Vast", "Very", "Vice", "Warm", "Wary", "Weak", "Wide", "Wild", "Wise", "Zero", "Both", "Else", "Ergo", "Lest", "Like", "Once", "Only", "Plus", "Save", "Sith", "Than", "That", "Then", "Thou", "Till", "Unto", "When", "Some",  "Ably", "Afar", "Anew", "Away", "Back", "Damn", "Dead", "Deep", "Down", "Duly", "Easy", "Else", "Even", "Ever", "Fair", "Fast", "Flat", "Full", "Good", "Half", "Hard", "Here", "High", "Home", "Idly", "Just", "Late", "Like", "Live", "Long", "Loud", "Much", "Near", "Nice", "Okay", "Once", "Only", "Over", "Part", "Past", "Real", "Slow", "Solo", "Soon", "Sure", "That", "Then", "This", "Thus", "Very", "When", "Wide", "Four Letter Prepositions", "Ajax", "Amid", "Anti", "Apud", "Atop", "Bout", "Chez", "Come", "Dahn", "Doon", "Down", "From", "Gain", "Half", "Into", "Like", "Mang", "Mong", "Near", "Nigh", "Offa", "Onto", "Outa", "Over", "Past", "Post", "Save", "Than", "Thro", "Thru", "Till", "Unto", "Upon", "Vice", "Whiz", "With",  "Ahem", "Ahoy", "Alas", "Amen", "Bang", "Blah", "Ciao", "Crud", "Damn", "Darn", "Egad", "Eina", "Fact", "Flip", "Fore", "Gosh", "Heck", "Hell", "Here", "Hist", "Hiya", "Hmmm", "Hmph", "Honk", "Hunh", "Jeez", "Jinx", "Like", "Lord", "Meow", "Mwah", "Nome", "Nyet", "Okay", "Oops", "Ouch", "Phew", "Phut", "Poof", "Pooh", "Pugh", "Shoo", "Snap", "Stop", "Sure", "Tara", "This", "Urgh", "Wall", "Waly", "Wham", "Whoa", "Word", "Yuck","Ace", "Aid", "Aim", "Air", "Ale", "Arm", "Art", "Awl", "Eel", "Ear", "Era", "Ice", "Ire", "Ilk", "Oar", "Oak", "Oat", "Oil", "Ore", "Owl", "Urn", "Web", "Cab", "Dab", "Jab", "Lab", "Tab", "Dad", "Fad", "Lad", "Mad", "Bag", "Gag", "Hag", "Lag", "Mag", "Rag", "Tag", "Pal", "Cam", "Dam", "Fam", "Ham", "Jam", "Ram", "Ban", "Can", "Fan", "Man", "Pan", "Tan", "Bap", "Cap", "Lap", "Pap", "Rap", "Sap", "Tap", "Yap", "Bar", "Car", "Jar", "Tar", "War", "Bat", "Cat", "Hat", "Mat", "Pat", "Tat", "Rat", "Vat", "Caw", "Jaw", "Law", "Maw", "Paw", "Bay", "Cay", "Day", "Hay", "Ray", "Pay", "Way", "Max", "Sax", "Tax", "Pea", "Sea", "Tea", "Bed", "Med", "Leg", "Peg", "Bee", "Lee", "Tee", "Gem", "Bet", "Jet", "Net", "Pet", "Set", "Den", "Hen", "Men", "Pen", "Ten", "Yen", "Dew", "Mew", "Pew", "Bib", "Fib", "Jib", "Rib", "Sib", "Bid", "Kid", "Lid", "Vid", "Tie", "Lie", "Pie", "Fig", "Jig", "Pig", "Rig", "Wig", "Dim", "Bin", "Din", "Fin", "Gin", "Pin", "Sin", "Tin", "Win", "Yin", "Dip", "Lip", "Pip", "Sip", "Tip", "Git", "Hit", "Kit", "Pit", "Wit", "Bod", "Cod", "God", "Mod", "Pod", "Rod", "Doe", "Foe", "Hoe", "Roe", "Toe", "Bog", "Cog", "Dog", "Fog", "Hog", "Jog", "Log", "Poi", "Con", "Son", "Ton", "Zoo", "Cop", "Hop", "Mop", "Pop", "Top", "Bot", "Cot", "Dot", "Lot", "Pot", "Tot", "Bow", "Cow", "Sow", "Row", "Box", "Lox", "Pox", "Boy", "Soy", "Toy", "Cub", "Nub", "Pub", "Sub", "Tub", "Bug", "Hug", "Jug", "Mug", "Rug", "Tug", "Bum", "Gum", "Hum", "Rum", "Tum", "Bun", "Gun", "Pun", "Run", "Sun", "Cup", "Pup", "Cut", "Gut", "Hut", "Nut", "Rut", "Egg", "Ego", "Elf", "Elm", "Emu", "End", "Era", "Eve", "Eye", "Ink", "Inn", "Ion", "Ivy", "Lye", "Dye", "Rye", "Pus", "Gym",  "Her", "His", "Him", "Our", "You", "She",  "Add", "Ail", "Are", "Eat", "Err", "Oil", "Use", "Nab", "Jab", "Bag", "Lag", "Nag", "Rag", "Sag", "Tag", "Wag", "Jam", "Ram", "Ran", "Tan", "Cap", "Lap", "Nap", "Rap", "Sap", "Tap", "Yap", "Mar", "Has", "Was", "Pat", "Sat", "Lay", "Pay", "Say", "Max", "Tax", "Fed", "See", "Get", "Let", "Net", "Met", "Pet", "Set", "Wet", "Mew", "Sew", "Lie", "Tie", "Bog", "Jog", "Boo", "Coo", "Moo", "Bop", "Hop", "Lop", "Mop", "Pop", "Top", "Sop", "Bow", "Mow", "Row", "Tow", "Dub", "Rub", "Dug", "Lug", "Tug", "Hum", "Sup", "Buy", "Got", "Jot", "Rot", "Nod", "Hem", "Led", "Wed", "Fib", "Jib", "Rib", "Did", "Dig", "Jig", "Rig", "Dip", "Nip", "Sip", "Rip", "Zip", "Gin", "Win", "Bit", "Hit", "Sit", "Won", "Pry", "Try", "Cry", "Three Letter Adjectives", "All", "Fab", "Bad", "Had", "Mad", "Rad", "Tad", "Far", "Fat", "Raw", "Lax", "Max", "Gay", "Big", "Dim", "Fit", "Red", "Wet", "Old", "New", "Hot", "Coy", "Fun", "Ill", "Odd", "Shy", "Dry", "Wry", "And", "But", "Yet", "For", "Nor", "The", "Not", "How", "Too", "Yet", "Now", "Off", "Any",  "Out",  "Bam", "Nah", "Yea", "Yep", "Naw", "Hey", "Yay", "Nay", "Pow", "Wow", "Moo", "Boo", "Bye", "Yum", "Ugh", "Bah", "Umm", "Why", "Aha", "Aye", "Hmm", "Hah", "Huh", "Ssh", "Brr", "Heh", "Oop", "Oof", "Zzz", "Gee", "Grr", "Yup", "Gah", "Mmm", "Dag", "Arr", "Eww", "Ehh"]
 /////////////////
 let cardDeckArray = [];
-let letters = document.querySelector("#letters")
-let input = document.querySelector('input')
-let inputValue = "";
-console.log(input);
-let cardsValues = document.querySelectorAll('.card')
-console.log(cardsValues);
+// let letters = document.querySelector("#letters")
+// let input = document.querySelector('input')
+// let inputValue = "";
+// console.log(input);
+// let cardsValues = document.querySelectorAll('.card')
+// console.log(cardsValues);
 
-function addingListeners(){
-    cardsValues = document.querySelectorAll(".card")
-    console.log(cardsValues)
-    cardsValues.forEach(mycard=> {
-        mycard.addEventListener('click',()=>{
-            inputValue += '';
-        })
-    })
-}
-class Player {
-    constructor(name,cards){
-        this.name = name,
-        this.cards = [];
-    }
-    pickup(pickUpPile){
+// function addingListeners(){
+//     cardsValues = document.querySelectorAll(".card")
+//     console.log(cardsValues)
+//     cardsValues.forEach(mycard=> {
+//         mycard.addEventListener('click',()=>{
+//             inputValue += '';
+//         })
+//     })
+// }
+// class Player {
+//     constructor(name,cards){
+//         this.name = name,
+//         this.cards = [];
+//     }
+//     pickup(pickUpPile){
 
-    }
-    discard (discardPile){
+//     }
+//     discard (discardPile){
 
-    }
-}
-const players = [
-    new Player("A"),
-    new Player("B")
-]
+//     }
+// }
+// const players = [
+//     new Player("A"),
+//     new Player("B")
+// ]
 class Card {
      constructor (suit, count, value) {
        this.suit = suit;
@@ -77,16 +77,16 @@ const cardsArray = [
      new Card("ER",2,7)
 ]
 // Create game object
-const game = {
-    newRound: newRound = ()=> {
-        let roundNumber = 1;
-        for (let i = 1; i<cardsArray.length; i++){
-            while (roundNumber <=8){
-                playerHandLength = i+2
-            }
-        }
-    }
-}
+// const game = {
+//     newRound: newRound = ()=> {
+//         let roundNumber = 1;
+//         for (let i = 1; i<cardsArray.length; i++){
+//             while (roundNumber <=8){
+//                 playerHandLength = i+2
+//             }
+//         }
+//     }
+// }
 // Create deckObject object
 const deckObject = {
     getDeck: getDeck =()=> {
@@ -139,17 +139,23 @@ load: function load(){
 	deckObject.renderDeck();
 }
 };
-let round = document.querySelector('#round');
-round.innerHTML = round.playerHandLength;
-let shuffleBtn = document.querySelector('#btn');
+// let round = document.querySelector('#round');
+// round.innerHTML = round.playerHandLength;
+// let shuffleBtn = document.querySelector('#btn');
+// const divP1Array = document.getElementById('deck');
+// //create the new comment that will content for the li. The text for this can be found in the input field
+// divP1Array.textContent = console.log(p1A);
+// //this input has to be assigned to a a textContent variable
+// divP1Array.textContent = p1A;
+
 // shuffleBtn.addEventListener('click', deckObject.load);
 // This piece is for the event listener that gets the string/s sorts and determines if they;'re legit
-const getGiveData = () => {
-    let textFieldData = document.getElementById('textField').value;
+// const getGiveData = () => {
+//     let textFieldData = document.getElementById('textField').value;
 
-    let btnClick = document.getElementById('btnText');
-    let textToCheck = document.getElementById('letters').textContent = textFieldData 
-} 
+//     let btnClick = document.getElementById('btnText');
+//     let textToCheck = document.getElementById('letters').textContent = textFieldData 
+// } 
 // const verifyData = (x) => {
 //     let x = textFieldData
 //     document.getElementById('converted').textContent = x 
@@ -159,14 +165,11 @@ const getGiveData = () => {
 // btnTxt.addEventListener('click', verifyData)
 
 var deck1 = getDeck();
-
 function shuffleArray(array) {
     let currentIndex = array.length,  randomIndex;
-  
     // While there remain elements to shuffle.
     while (currentIndex != 0) {
-  
-      // Pick a remaining element.
+        // Pick a remaining element.
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
   
@@ -174,42 +177,57 @@ function shuffleArray(array) {
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
-  
     return array;
   }
-
   let shuffledArray = shuffleArray(deck1)
-
-
-
-console.log(deck1.length)
 
 // console.log(typeof(deck1))
 // deck1 = Object.entries(deck1);
-console.log(deck1);
-console.log(typeof(deck1))
-
-
-
-
-
-
-console.log(deck1[2])
-
-
-
+// console.log(deck1);
+// console.log(typeof(deck1))
+//console.log(deck1[2])
 let p1A = []
-p1A = console.log(deck1.slice(0,5));
+console.log(p1A)
 
 // btnTxt.addEventListener('click', function(evt) {
 //     console.log(evt)
 // });
+ p1A = deck1.slice(0,5);
 
-const btn = document.querySelector('#btn');
+let btnD = document.querySelector('#btn');
+btnD.addEventListener('click', function(evt) {
+   // add a new div element to hold what gets added here
+  const divDeck = document.getElementById('deck');
+  //create the new comment that will content for the li. The text for this can be found in the input field
+  // p1A
+  let playerHand = console.log(p1A);
+
+  divDeck.textContent = playerHand
+//   divDeck.appendChild(divDeck);
+}
+);
+alert('js loaded')
+
+
+let btn = document.querySelector('button');
+
+
+
+array = [5,4,3,23,2,1]
 btn.addEventListener('click', function(evt) {
-  // testing!
-  console.log(evt);  
+  // add a new li element to hold what gets added to this ul
+  const li = document.createElement('li');
+  //create the new comment that will content for the li. The text for this can be found in the input field
+  const inp = document.querySelector('input').value;
+  //this input has to be assigned to a a textContent variable
+  li.textContent = p1A
+
+//   for (let i=0; i < p1A.suit.length; i++) {
+// 	console.log(p1A.suit[i]);
+// }
+
+  document.querySelector('ul').appendChild(li);
+  console.log(li);  
 });
 
-
-
+console.log(p1A);
