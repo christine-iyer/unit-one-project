@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
      <link rel="stylesheet" href="style.css">
-     <script src="script.js" defer></script>
+     <script src="practiceCode/app.js" defer></script>
 </head>
+
 <body>
+     <button class="modal-buttons" id="openModal">About the Game</button>
+     <div id="modal">
+          <div id="modal-textbox">
+               <h1>Learn to Play Quiddler</h1>
+               <p>
+                    OBJECT: To obtain the highest number of points by combining the cards in your hand into words.
+                <p>ROUNDS: 8. With each round, the cards dealt increases by one.
+
+                </p>    
+                
+                <p>THE DEAL: After each deal, the remaining cards are placed in the center as a draw pile, and the top card is
+                    turned over to start
+                    the discard pile.</p> 
+                <p>GOING OUT: A player can only go out during when they can use the number of cards they were dealt in a word. After drawing, a player must be able to
+                    arrange all the cards with one card remaining which must be discarded
+                    to go out.</p> 
+                
+
+               <div id="modal-footer">
+                    <button class="modal-buttons" id="close">Close</button>
+               </div>
+          </div>
+     </div>
+
+
      <div class="deck">
           <h1>A Game of Quiddler</h1>
-          <button id="btn">Shuffle</button>
-          <div id="deck"></div>
-          <div id="deckDC"></div>
+          <button id="dealBtn">Get Cards</button>
+          <div class="instructions"></div>
      </div>
-     <div id= "playerOne" class="score-board">
-          <h1 id="letters">Enters the letters that you see above in the field provided and hit Submit</h1>
-          Name: <input type="string" id="textField" value= "">
-          <button id="btnTxt">Submit will print your word</button>
 
-          
-     <h3 id="round">Round Number</h3>
-     <h2 id="text-area_1">Empty for now</h2>
-     
-     
-</div>
-<div id="converted"> Empty field for now </div>
+     <div class="messages"></div>
+
+     <button class="landscape">Shuffle</button>
+
+     <h1 id="letters">Enters the letters that you see above in the field provided and hit Submit</h1>
+     Name: <input type="string" id="textField" value="">
+     <button id="btnTxt">Submit will print your word</button>
 
 
-<section></section>
-          <h3 id="round"><span>An empty field</span> Number</h3>
-          <h2 id="text-area_2"></h2>
-      </div>
+
+     <div class="landscape"> Empty field for now </div>
+
+
+
+     <h2 class="store"></h2>
+     </div>
      </div>
      <h3>Comments</h3>
-<ul>
-  <li>SEI Rocks!</li>
-</ul>
-<input>
-<button>Add Comment</button>
+
+     <input>
+     <button>Add Comment</button>
 
 
 
 </body>
+
 </html>

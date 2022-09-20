@@ -151,7 +151,7 @@ function shuffleArray(array) {
 
 
 class Player {
-    constructor(money, tool = [], letters) {
+    constructor(money, tool, letters) {
         this.money = money
         this.tool = tools.splice(0,5)
         this.letters = []
@@ -192,6 +192,8 @@ class Player {
         } 
     }
 }
+
+
 const player = new Player(0)
 const startGame = () => {
     // initialize a new player
@@ -208,10 +210,10 @@ const message = (newMessage) => {
     
     document.querySelector('.messages').innerHTML = `
      <h5>${newMessage}</h5>
-     <h6>Current Hand:<span id="letter">${player.loopArray().join(' ')}</span></h6>
+     <h2>Current Hand: <span id="letter">${player.loopArray().join(' ')}</span></h2>
      <h6>Current Points:<span>${player.tool.earnings}</span></h6>
      <h6>Player Bank Account: <span>${player.money}</span></h6>
-     <h6>Player Cards: <span>${player.letters}</span></h6>
+     <h2>Player Cards: <span>${player.letters}</span></h2>
      `
 }
 
@@ -225,8 +227,8 @@ const renderStore = () => {
           <h6> Purchase price: ${tools[0].purchasePrice}</h6>
          `
         // Do I add the button or not
-        store.innerHTML += (player.money >= tools[0].purchasePrice) ? `<button class="purchase">Purchase</button>` : `<h6>You can't afford this yet</h6>`
-        const purchaseBtn = document.querySelector('.purchase')
+        store.innerHTML += (player.money >= tools[0].purchasePrice) ? `<button id="dealBtn">Purchase</button>` : `<h6>You can't afford this yet</h6>`
+        const purchaseBtn = document.getElementById('dealBtn')
         if (purchaseBtn) {
             purchaseBtn.addEventListener('click', (evt) => {
                 player.nextTool(tools)
@@ -248,7 +250,7 @@ const renderStore = () => {
 
 const landscape = (evt) => {
     player.money += player.tool.earnings
-    if (player.money >= 1000 && player.tool.name === 'starving students') {
+    if (player.money >= 10) {
         message('You have won the game')
         evt.target.remove()
     } else {
@@ -256,7 +258,21 @@ const landscape = (evt) => {
         renderStore()
     }
 }
+// Controlling the modal
+const openBtn = document.querySelector("#openModal");
+const modal = document.querySelector("#modal");
+const closeBtn = document.querySelector("#close");
+const openModal = (event) => {
+     modal.style.display = "block";
+}
+const closeModal = (event) => {
+     modal.style.display = "none";
+}
 
+//Event Listeners
+openBtn.addEventListener('click', openModal)
+closeBtn.addEventListener('click', closeModal)
+setTimeout(openModal, 3000);
 startGame()
 const landscapeBtn = document.querySelector('.landscape')
 landscapeBtn.addEventListener('click', landscape)

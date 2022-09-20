@@ -2,20 +2,20 @@ const wordsArray = ["Abuse", "Adult", "Agent", "Anger", "Apple", "Award", "Basis
 
 const obj = Object.assign({}, wordsArray);
 // this is the input and output text
-const button = document.getElementById('button');
-const hi=(event)=>{
-     let input = [];
-     let pEl = [];
-      input = document.querySelector('#myText').value;
+// const button = document.getElementById('button');
+// const hi=(event)=>{
+//      let input = [];
+//      let pEl = [];
+//       input = document.querySelector('#myText').value;
      
-     pEl = document.querySelector('p');
-     input.textContent
-     pEl.innerHTML = input;
-     pEl
+//      pEl = document.querySelector('p');
+//      input.textContent
+//      pEl.innerHTML = input;
+//      pEl
 // convert string to regular expression
      
-}
-button.addEventListener('click', hi);
+// }
+// button.addEventListener('click', hi);
 ///////////////////////
 
 
